@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: "Playfair Display";
+  font-size: 14px;
+
+  line-height: 1.6;
+  color: #626262;
+}
+
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Conteiner */
+
+.container {
+  position: relative;
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1065px;
+  z-index: 1;
+}
+
+/* Header */
+
+.header {
+  margin-top: 70px;
+}
+
+.header_logo {
+  width: 119px;
+  height: 23px;
+
+  color: #000000;
+
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  letter-spacing: 6px;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Navigation */
+
+.nav {
+  font-weight: 400;
+
+  line-height: 24px;
+  text-transform: uppercase;
+  float: right;
+
+  color: #626262;
+}
+
+.nav_link {
+  margin-left: 100px;
+
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  text-decoration: none;
+  color: #626262;
+}
