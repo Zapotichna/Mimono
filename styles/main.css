@@ -25,11 +25,18 @@ h6 {
 
 .container {
   position: relative;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   width: 100%;
   max-width: 1065px;
   z-index: 1;
+}
+
+.container_2{
+  width: 893px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Header */
@@ -80,4 +87,43 @@ h6 {
 
   text-decoration: none;
   color: #626262;
+}
+
+/* Image */
+
+.image_logo {
+  width: 1061px;
+  height: 509px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+/* Title */
+
+.title{
+  margin-top: 15px;
+
+  color: #626262;
+  font-family: "Playfair Display";
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.title_text{
+  margin-top: 35px;
+  margin-bottom: 50px;
+
+  color: #626262;
+  font-family: "Playfair Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subtitle {
+  color: #b4ab9e;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase; 
 }
