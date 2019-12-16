@@ -24,7 +24,7 @@ body {
 
 /* Conteiner */
 
-.container {
+.section_presentation_img {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -34,7 +34,7 @@ body {
   z-index: 1;
 }
 
-.container_2 {
+.container {
   width: 893px;
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +49,7 @@ body {
 /* Header */
 
 .header {
-  margin-top: 70px;
+  padding-top: 70px;
 }
 
 .header_logo {
@@ -67,10 +67,6 @@ body {
 
   text-decoration: none;
   letter-spacing: 6px;
-}
-
-.clr {
-  clear: both;
 }
 
 /* Navigation */
@@ -94,6 +90,31 @@ body {
 
   text-decoration: none;
   color: #626262;
+}
+
+.nav_link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: #626262;
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.nav_link:hover {
+  color: #626262;
+}
+
+.nav_link:hover::after {
+  opacity: 1;
 }
 
 /* Image */
@@ -151,7 +172,7 @@ body {
 
 /* NewsLetter */
 
-.news {
+.section_newslatter_content {
   width: 100%;
 
   background-color: #f0f0f0;
@@ -159,7 +180,7 @@ body {
   padding-bottom: 75px;
 }
 
-.news_title {
+.section_newslatter_title {
   margin-bottom: 69px;
   text-align: center;
   color: #333333;
@@ -168,7 +189,7 @@ body {
   letter-spacing: 0.75px;
 }
 
-.news_form {
+.section_newsletter_form {
   position: relative;
   width: 404px;
   margin-left: auto;
@@ -177,7 +198,7 @@ body {
   display: block;
 }
 
-.news_form_input {
+.section_newslatter_form_input {
   background: none;
   border: none;
 
@@ -189,7 +210,7 @@ body {
   display: block;
 }
 
-.news_form_button {
+.section_newsletter_form_button {
   background: none;
   border: none;
 
@@ -202,7 +223,7 @@ body {
 
 /* Button */
 
-.block {
+.section_button {
   position: relative;
   padding-top: 82px;
   padding-bottom: 100px;
@@ -224,6 +245,12 @@ body {
 
   font-size: 20px;
   font-family: "Playfair Display";
+}
+
+.button:hover {
+  background-color: #626262;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* Grid */
@@ -272,12 +299,20 @@ body {
   text-decoration: none;
 }
 
+.nav_left a:hover {
+  color: #797979;
+}
+
 .nav_right {
   float: right;
 }
 
 .nav_right a {
   padding-left: 18px;
+}
+
+.nav_right a:hover {
+  color: #797979;
 }
 
 .nav_right span {
