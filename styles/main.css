@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu&display=swap");
-@import "./media/tablet.css";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu&display=swap');
+@import "../media/tablet.css";
 
 :root{
   --playfailFont: "Playfair Display": 
-  --inconsolataFont: "Inconsolata", monospace;
-  --ubuntuFont: "Ubuntu", sans-serif;
+  --inconsolataFont: "Inconsolata";
+  --ubuntuFont: "Ubuntu";
   --bodyColor: #626262; 
   --postColor: #b4ab9e;
   --newslatterColor: #333333;
@@ -48,7 +48,8 @@ body {
 }
 
 .container {
-  width: 893px;
+  width: 100%;
+  max-width: 893px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -316,4 +317,56 @@ body {
   font-family: var(--playfailFont);
   font-size: 14px;
   color: black;
+}
+
+
+@media (max-width: 989px) {
+  .nav_link {
+    margin-left: 65px;
+  }
+}
+
+@media (max-width: 849px) {
+  .nav_link {
+    margin-left: 35px;
+  }
+}
+
+@media (max-width: 784px) {
+  .nav_link {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 684px) {
+  .nav_link {
+    display: none;
+  }
+  .nav_btn {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin-right: 15px;
+  }
+  .nav_btn::before,
+  .nav_btn::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--bodyColor);
+  }
+  .nav_btn::before{
+    top: 0;
+  }
+  .nav_btn::after{
+    bottom: 0;
+  }
+  .nav_btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--bodyColor);
+    top: 9px;
+  }
 }
