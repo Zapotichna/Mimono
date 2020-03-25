@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu&display=swap");
+@import "./media/tablet.css";
 *,
 *::before,
 *::after {
@@ -38,12 +40,6 @@ body {
   width: 893px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container_3 {
-  width: 893px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 /* Header */
@@ -231,7 +227,7 @@ body {
   padding: 15px 32px;
 
   background-color: #ffffff;
-  color: ##626262;
+  color: #626262;
   border: 1px solid #000;
   text-align: center;
 
