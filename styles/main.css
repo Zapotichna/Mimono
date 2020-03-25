@@ -5,6 +5,10 @@
   --playfailFont: "Playfair Display": 
   --inconsolataFont: "Inconsolata", monospace;
   --ubuntuFont: "Ubuntu", sans-serif;
+  --bodyColor: #626262; 
+  --postColor: #b4ab9e;
+  --newslatterColor: #333333;
+  --navColor: #797979;
 }
 
 *,
@@ -28,7 +32,7 @@ body {
   font-size: 14px;
 
   line-height: 1.6;
-  color: #626262;
+  color: var(--bodyColor);
 }
 
 /* Conteiner */
@@ -59,7 +63,7 @@ body {
   width: 119px;
   height: 23px;
 
-  color: #000000;
+  color: black;
 
   font-family: var(--inconsolataFont);
   font-size: 30px;
@@ -80,8 +84,6 @@ body {
   line-height: 24px;
   text-transform: uppercase;
   float: right;
-
-  color: #626262;
 }
 
 .nav_link {
@@ -92,7 +94,7 @@ body {
   position: relative;
 
   text-decoration: none;
-  color: #626262;
+  color: var(--bodyColor);
 }
 
 .nav_link::after {
@@ -101,7 +103,7 @@ body {
   width: 100%;
   height: 1px;
 
-  background-color: #626262;
+  background-color: var(--bodyColor);
   opacity: 0;
 
   position: absolute;
@@ -113,7 +115,7 @@ body {
 }
 
 .nav_link:hover {
-  color: #626262;
+  color: var(--bodyColor);
 }
 
 .nav_link:hover::after {
@@ -129,12 +131,12 @@ body {
   margin-bottom: 100px;
 }
 
-/* Title */
+/* Post */
 
 .post_title {
   margin-top: 15px;
 
-  color: #626262;
+  color: var(--bodyColor);
   font-family: var(--playfailFont);
   font-size: 30px;
   font-weight: 400;
@@ -144,7 +146,7 @@ body {
   margin-top: 35px;
   margin-bottom: 50px;
 
-  color: #626262;
+  color: var(--bodyColor);
   font-family: var(--playfailFont);
   font-size: 14px;
   font-weight: 400;
@@ -158,7 +160,7 @@ body {
 }
 
 .post_subtitle {
-  color: #b4ab9e;
+  color: var(--postColor);
   font-family: var(--ubuntuFont);
   font-size: 14px;
   font-weight: 300;
@@ -178,7 +180,7 @@ body {
 .section_newslatter_title {
   margin-bottom: 69px;
   text-align: center;
-  color: #333333;
+  color: var(--newslatterColor);
   font-family: var(--playfailFont);
   font-size: 30px;
   letter-spacing: 0.75px;
@@ -199,7 +201,7 @@ body {
 
   padding: 14px 46px 14px 0px;
   width: 100%;
-  color: #626262;
+  color: var(--bodyColor);
   font-family: var(--playfailFont);
   font-size: 14px;
   display: block;
@@ -233,9 +235,9 @@ body {
 
   padding: 15px 32px;
 
-  background-color: #ffffff;
-  color: #626262;
-  border: 1px solid #000;
+  background-color: white;
+  color: var(--bodyColor);
+  border: 1px solid black;
   text-align: center;
 
   font-size: 20px;
@@ -243,8 +245,8 @@ body {
 }
 
 .button:hover {
-  background-color: #626262;
-  color: #ffffff;
+  background-color: var(--bodyColor);
+  color: white;
   cursor: pointer;
 }
 
@@ -290,12 +292,12 @@ body {
 
   font-family: var(--playfailFont);
   font-size: 14px;
-  color: #000000;
+  color: black;
   text-decoration: none;
 }
 
 .nav_left a:hover {
-  color: #797979;
+  color: var(--navColor);
 }
 
 .nav_right {
@@ -307,11 +309,11 @@ body {
 }
 
 .nav_right a:hover {
-  color: #797979;
+  color: var(--navColor);
 }
 
 .nav_right span {
   font-family: var(--playfailFont);
   font-size: 14px;
-  color: #000000;
+  color: black;
 }
