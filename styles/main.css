@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu&display=swap');
-@import "../media/tablet.css";
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css'); */
+@import "../media/media.css";
 
 :root{
   --playfailFont: "Playfair Display": 
@@ -87,7 +88,7 @@ body {
   float: right;
 }
 
-.nav_link {
+.nav_link span{
   margin-left: 100px;
 
   display: inline-block;
@@ -98,7 +99,7 @@ body {
   color: var(--bodyColor);
 }
 
-.nav_link::after {
+.nav_link span::after {
   content: "";
   display: block;
   width: 100%;
@@ -115,13 +116,52 @@ body {
   transition: opacity 0.1s linear;
 }
 
-.nav_link:hover {
+.nav_link span:hover {
   color: var(--bodyColor);
 }
 
-.nav_link:hover::after {
+.nav_link span:hover,
+.nav_link span::after {
   opacity: 1;
 }
+
+.icon_item {
+  margin-left: 100px;
+  padding-top: 8px;
+
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  text-decoration: none;
+  color: var(--bodyColor);
+}
+
+/* .icon_item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--bodyColor);
+  opacity: 0;
+
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  z-index: 2;
+
+  transition: opacity 0.1s linear;
+}
+
+.icon_item:hover {
+  color: var(--bodyColor);
+}
+
+.icon_item:hover
+.icon_item::after {
+  opacity: 1;
+}  */
 
 /* Image */
 
@@ -319,54 +359,45 @@ body {
   color: black;
 }
 
+@media (min-width: 989px) {
+  .icon_item {
+    display: none;
+  }
+}
 
 @media (max-width: 989px) {
-  .nav_link {
+  .nav_link span {
     margin-left: 65px;
+  }
+  .icon_item {
+    display: none;
   }
 }
 
 @media (max-width: 849px) {
-  .nav_link {
+  .nav_link span {
     margin-left: 35px;
+  }
+  .icon_item {
+    display: none;
   }
 }
 
 @media (max-width: 784px) {
-  .nav_link {
+  .nav_link span {
     margin-left: 25px;
+  }
+  .icon-item {
+    display: none;
   }
 }
 
 @media (max-width: 684px) {
-  .nav_link {
+  .nav_link span {
     display: none;
   }
-  .nav_btn {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    margin-right: 15px;
-  }
-  .nav_btn::before,
-  .nav_btn::after{
-    content: "";
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    background-color: var(--bodyColor);
-  }
-  .nav_btn::before{
-    top: 0;
-  }
-  .nav_btn::after{
-    bottom: 0;
-  }
-  .nav_btn span{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--bodyColor);
-    top: 9px;
+  .icon_item {
+    display: inline-block;
+    margin-left: 25px;
   }
 }
