@@ -38,18 +38,7 @@ body {
 
 /* Conteiner */
 
-.section_presentation_img {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
-  width: 100%;
-  max-width: 1065px;
-  z-index: 1;
-}
-
 .container {
-  width: 100%;
   max-width: 893px;
   margin-left: auto;
   margin-right: auto;
@@ -62,7 +51,7 @@ body {
 }
 
 .header_logo {
-  width: 119px;
+  max-width: 119px;
   height: 23px;
 
   color: black;
@@ -133,46 +122,30 @@ body {
   vertical-align: top;
   position: relative;
 
-  text-decoration: none;
   color: var(--bodyColor);
 }
 
-/* .icon_item::after {
-  content: "";
+/* Presentation */
+
+.presentation_img {
+  margin: 0 auto;
   display: block;
-  width: 100%;
-  height: 1px;
+  max-width: 100%;
 
-  background-color: var(--bodyColor);
-  opacity: 0;
-
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  z-index: 2;
-
-  transition: opacity 0.1s linear;
+  z-index: 1;
 }
 
-.icon_item:hover {
-  color: var(--bodyColor);
-}
-
-.icon_item:hover
-.icon_item::after {
-  opacity: 1;
-}  */
-
-/* Image */
-
-.image_logo {
-  width: 1061px;
-  height: 509px;
-  margin-top: 70px;
-  margin-bottom: 100px;
-}
 
 /* Post */
+
+.post {
+  margin-top: 133px;
+}
+
+.post_img{
+  display: block;
+  max-width: 100%;
+}
 
 .post_title {
   margin-top: 15px;
@@ -181,6 +154,14 @@ body {
   font-family: var(--playfailFont);
   font-size: 30px;
   font-weight: 400;
+}
+
+.post_subtitle {
+  color: var(--postColor);
+  font-family: var(--ubuntuFont);
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 .post_description {
@@ -194,19 +175,6 @@ body {
   line-height: 24px;
 }
 
-/* Post */
-
-.post {
-  margin-top: 133px;
-}
-
-.post_subtitle {
-  color: var(--postColor);
-  font-family: var(--ubuntuFont);
-  font-size: 14px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
 
 /* NewsLetter */
 
@@ -319,12 +287,13 @@ body {
 
 .footer {
   padding: 40px 71px 45px 0px;
-
+  font-size: 14px;
   background: #f0f0f0;
 }
 
 .nav_left {
   padding-left: 150px;
+  float: left;
 }
 
 .nav_left a {
@@ -332,7 +301,6 @@ body {
   float: left;
 
   font-family: var(--playfailFont);
-  font-size: 14px;
   color: black;
   text-decoration: none;
 }
@@ -355,44 +323,86 @@ body {
 
 .nav_right span {
   font-family: var(--playfailFont);
-  font-size: 14px;
   color: black;
 }
 
-@media (min-width: 989px) {
+@media screen and (min-width:989px){
   .icon_item {
     display: none;
   }
 }
 
-@media (max-width: 989px) {
+@media screen and (max-width: 989px) {
   .nav_link span {
     margin-left: 65px;
   }
   .icon_item {
     display: none;
   }
+  .nav_left {
+    padding-left: 100px;
+}
 }
 
-@media (max-width: 849px) {
+@media screen and (max-width: 849px) {
+  .header {
+    padding-top: 55px;
+  }
+  .container{
+    max-width: 100%;
+
+  }
+  .header_logo{
+    font-size: 24px;
+
+  }
   .nav_link span {
     margin-left: 35px;
   }
   .icon_item {
     display: none;
   }
+  .post_title{
+    font-size: 28px;
+  }
+  .nav_left {
+    padding-left: 70px;
+}
 }
 
-@media (max-width: 784px) {
+@media screen and (max-width: 784px) {
   .nav_link span {
     margin-left: 25px;
   }
   .icon-item {
     display: none;
   }
+  .post{
+    margin-top: 70px;
+  }
+  .post_title{
+    font-size: 25px;
+  }
+  .post_description{
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+  .section_newslatter_content{
+    padding: 40px 0;
+  }
+  .section_newslatter_title{
+    margin-bottom: 40px;
+    font-size: 25px;
+  }
+  .section_newsletter_form{
+    width: 370px;
+  }
+  .nav_left {
+    padding-left: 55px;
+}
 }
 
-@media (max-width: 684px) {
+@media screen and (max-width: 684px) {
   .nav_link span {
     display: none;
   }
@@ -400,4 +410,31 @@ body {
     display: inline-block;
     margin-left: 25px;
   }
+  .post_title{
+    font-size: 22px;
+  }
 }
+
+@media screen and (max-width: 559px){
+  .post{
+    margin-top: 50px;
+  }
+  .post_subtitle{
+    font-size: 12px;
+  }
+  .post_description{
+    margin: 15px 0;
+    font-size: 12px;
+  }
+  .section_newslatter_form{
+    width: 345px;
+  }
+  .section_button{
+    padding-top: 50px;
+    padding-bottom: 85px;
+  }
+  .footer{
+    padding: 25px 70px 40px 0px;
+    font-size: 12px;
+  }
+} 
