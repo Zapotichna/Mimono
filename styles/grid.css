@@ -1,0 +1,28 @@
+/* Grid */
+.row {
+  margin-left: calc(var(--gutterWidth)/2 * -1);
+  margin-right: calc(var(--gutterWidth)/2 * -1);
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.col {
+  padding-left: calc(var(--gutterWidth)/2);
+  padding-right: calc(var(--gutterWidth)/2);
+  width: 100%;
+  float: left;
+}
+
+@media screen and (min-width: 768px) {
+  .col {
+    width: 50%;
+  }
+}
